@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Scope Test</title>
+</h:head>
+<h:body>
+	<h2>Scope Test</h2>
+	<h:form id="form">
+	
+		<label>InteractionId:</label>
+		<h:inputText id="conversationId" value="#{mainBean.conversationId}" />
+		<br/>
+		<label >Name:</label>		
+		<h:outputText value="#{mainBean.person.name}" />
+		<br/>
+		<label >E-mail:</label>		
+		<h:outputText value="#{mainBean.person.email}" />
+		<br/>
+		<label>Counter:</label>
+		<h:outputText value="#{mainBean.counter.actualValue}" />
+		<br/>
+		<h:commandButton action="#{mainBean.increment()}"	value="Increment" />
+				
+	</h:form>
+
+	
+</h:body>
+</html>
